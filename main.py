@@ -26,10 +26,12 @@ def download(url):
 
     user_input = input('Enter would you like to open the file now? y/n: ')
 
-    if user_input == 'y' or 'Y':
+    if user_input == 'y':
         subprocess.run(['java', '-jar', f'forge_{forge_version}.jar'])
-    else:
+    elif user_input == 'n':
         print('finished!')
+    else:
+        print('Not an option!')
 
 
 def main():
